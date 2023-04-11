@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+  --body-bg-gradient: linear-gradient(90deg, #f27333, #ed570c, #f54b42);
+  --form-bg: #FFFFFF;
+  --form-font-color: #333333;
+  --button-bg-gradient: linear-gradient(90deg, #f54b42, #ed570c, #f27333);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', Sans-Serif;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--body-bg-gradient);
+  color: var(--form-font-color);
+}
+
+#calculator {
+  background: var(--form-bg);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#calculator h2 {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+#calculator h2::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 25%;
+  background: var(--body-bg-gradient);
+  bottom: 2px;
+  border-radius: 3px;
+}
+
+#input_area {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.input_field label {
+  font-size: 0.875rem;
+  color: rgba(51, 51, 51, 0.8);
+  font-weight: 500;
+}
+
+.input_field input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  color: #333;
+  font-size: 0.800rem;
+  padding: 5px;
+  -moz-appearence: textfield;
+  appearance: textfield;
+}
+
+#result_area {
+  text-align: center;
+}
+
+#result_value {
+  font-size: 2.3rem;
+}
+
+#btn_calc {
+  background: var(--button-bg-gradient);
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+#btn_calc:hover {
+  background: var(--body-bg-gradient);
+  transform: scale(1.1);
+}
